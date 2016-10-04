@@ -1,0 +1,23 @@
+Story: User will Login and will enquire for seat availability on different Bus-travels on some date
+(com/bdd/test/jbehave/stories/my.story)
+Meta:
+@runAll 
+
+Scenario: 100.01 Verify page lables
+Examples:
+Given Launch the site
+Given Read User Name and Password from Excel <filePath> <testCaseName> and do login
+Given Verify page lables
+Then create Customized report <testCaseName>
+
+|filePath|testCaseName|
+|src\\main\\resources\\test_data_sheet\\LoginExcel.xls|"100.01 Verify page lables"|
+
+Example: {filePath=src\\main\\resources\\test_data_sheet\\LoginExcel.xls, testCaseName="100.01 Verify page lables", 100.01=, runAll=}
+Given Launch the site
+Given Read User Name and Password from Excel src\\main\\resources\\test_data_sheet\\LoginExcel.xls "100.01 Verify page lables" and do login
+Given Verify page lables
+Then create Customized report "100.01 Verify page lables"
+
+
+

@@ -1,0 +1,23 @@
+<story path="com/bdd/test/jbehave/stories/my.story" title="Story: User will Login and will enquire for seat availability on different Bus-travels on some date">
+<meta>
+<property keyword="@" name="runAll" value=""/>
+</meta>
+<scenario keyword="Scenario:" title="100.01 Verify page lables">
+<examples keyword="Examples:">
+<step>Given Launch the site</step>
+<step>Given Read User Name and Password from Excel &lt;filePath&gt; &lt;testCaseName&gt; and do login</step>
+<step>Given Verify page lables</step>
+<step>Then create Customized report &lt;testCaseName&gt;</step>
+<parameters>
+<names><name>filePath</name><name>testCaseName</name></names>
+<values><value>src\\main\\resources\\test_data_sheet\\LoginExcel.xls</value><value>&quot;100.01 Verify page lables&quot;</value></values>
+</parameters>
+
+<example keyword="Example:">{filePath=src\\main\\resources\\test_data_sheet\\LoginExcel.xls, testCaseName=&quot;100.01 Verify page lables&quot;, 100.01=, runAll=}</example>
+<step outcome="successful">Given Launch the site</step>
+<step outcome="successful">Given Read User Name and Password from Excel <parameter>src\\main\\resources\\test_data_sheet\\LoginExcel.xls</parameter> <parameter>&quot;100.01 Verify page lables&quot;</parameter> and do login</step>
+<step outcome="successful">Given Verify page lables</step>
+<step outcome="successful">Then create Customized report <parameter>&quot;100.01 Verify page lables&quot;</parameter></step>
+</examples>
+</scenario>
+</story>
