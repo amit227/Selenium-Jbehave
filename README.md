@@ -3,9 +3,9 @@ Selenium with BDD
 
 
 #Overview 
--About Project
--Project Structure
--Steps to run the project
+About Project
+Project Structure
+Steps to run the project
 
 
 
@@ -53,7 +53,7 @@ https://cloud.githubusercontent.com/assets/22616784/19104444/1f6d5510-8afa-11e6-
 
 
 
-##Steps to run scripts
+#Steps to run scripts
 
 1.
 Checkout the project to your local: 
