@@ -2,21 +2,22 @@
 Selenium with BDD 
 
 
-#Overview 
+##Overview 
 About Project,
 Project Structure,
-Steps to run the project.
+Steps to run the project
+Tools to be used
 
 
 
-#About Project: 
-This Automation project is using Selenium and Jbehave (BDD) for writing the automation scripts.
-Includes the scenarios based on an Online Bus Ticket Booking WebSite "https://www.abhibus.com/"
+##About Project: 
+The Automation project is using Selenium and Jbehave (BDD) for writing the automation scripts.
+it includes the scenarios based on an Online Bus Ticket Booking WebSite "https://www.abhibus.com/"
 Scenarios will check login functionality, will check the home page labels, will perform Enquiry for Bus seat availability etc.
 In the end of execution it will create an execution report.
 
 
-#Project Structure: 
+##Project Structure: 
 Please see below snapshots for the same: 
 screenshot 1
 https://cloud.githubusercontent.com/assets/22616784/19104445/1f7887d2-8afa-11e6-86c5-d9cfc66726aa.png
@@ -53,7 +54,7 @@ https://cloud.githubusercontent.com/assets/22616784/19104444/1f6d5510-8afa-11e6-
 
 
 
-#Steps to run scripts
+##Steps to run scripts
 
 1.
 Checkout the project to your local: 
@@ -103,6 +104,14 @@ There will be report generated in path  src/main/resources/reports with name hav
 	
 	mvn clean verify -Dmy-integration-test  -Dmeta.filter="+runAll -100.01" -DBase_Url =https://www.abhibus.com/
 
+
+#Selenium and Firefox Compatibility
+I have faced many issues regarding compatibility between versions of Selenium and Firefox,
+One valid compatible combination I have found as below,
+
+	Selenium Vesrion 2.47 and Firefox 33.o 
+	
+If user faces compatibility issue for Selenium and firefox ,user is advised to use above versions for the same.
 
 Reference regarding Report : 
 http://extentreports.relevantcodes.com/
