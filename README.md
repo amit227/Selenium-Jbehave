@@ -61,16 +61,16 @@ There are test cases written in Jbehave  format in Jbehave story files so each t
 
    ##Execution through Eclipse
    i.e.
--go to eclipse and run as configuration and select maven build.
--Then give the values to the variables as 
+Go to eclipse and run as configuration and select maven build.
+Then give the values to the variables as 
  goal = clean verify
 profiles =my-integration-test
  meta.filter =+ <Meta ID of jbehave scenarios>
  i.e. meta.filter= +100.01
 Base_Url = https://www.abhibus.com/
 
--Then run it.
--There will be report generated in path  src/main/resources/reports with name having Automation_test_report + time stamp
+Then run it.
+There will be report generated in path  src/main/resources/reports with name having Automation_test_report + time stamp
 
 
 screenshot 10
