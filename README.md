@@ -68,7 +68,7 @@ https://cloud.githubusercontent.com/assets/22616784/19104443/1f6b4a4a-8afa-11e6-
 
 
 
-#Execution through Eclipse
+###Execution through Eclipse
   
 Go to eclipse and run as configuration and select maven build.
 	Then give the values to the variables as 
@@ -88,7 +88,7 @@ where 100.01 is meta id of test case.
 Then run it.
 There will be report generated in path  src/main/resources/reports with name having Automation_test_report + time stamp
 
-#Execute through Command line
+###Execute through Command line
 
  Command to execute single test case.
 	
@@ -105,7 +105,7 @@ There will be report generated in path  src/main/resources/reports with name hav
 	mvn clean verify -Dmy-integration-test  -Dmeta.filter="+runAll -100.01" -DBase_Url =https://www.abhibus.com/
 
 
-#Selenium and Firefox Compatibility
+###Selenium and Firefox Compatibility
 I have faced many issues regarding compatibility between versions of Selenium and Firefox,
 One valid compatible combination I have found as below,
 
