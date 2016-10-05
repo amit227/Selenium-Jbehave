@@ -3,9 +3,9 @@ Selenium with BDD
 
 
 #Overview 
-About Project
-Project Structure
-Steps to run the project
+About Project,
+Project Structure,
+Steps to run the project.
 
 
 
