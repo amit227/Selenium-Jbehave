@@ -70,7 +70,13 @@ https://cloud.githubusercontent.com/assets/22616784/19104443/1f6b4a4a-8afa-11e6-
 Execution through Eclipse
   
 Go to eclipse and run as configuration and select maven build.
-
+	Then give the values to the variables as 
+ 		goal = clean verify,
+		profiles =my-integration-test,
+		meta.filter =+meta ids of scenarios
+ 		i.e. meta.filter= +100.01 Base_Url = https://www.abhibus.com/
+	mvn clean verify -Dmy-integration-test  -Dmeta.filter="+100.01" -DBase_Url =https://www.abhibus.com/
+ where 100.01 is meta id of test case.
 
 Then run it.
 There will be report generated in path  src/main/resources/reports with name having Automation_test_report + time stamp
@@ -78,13 +84,6 @@ There will be report generated in path  src/main/resources/reports with name hav
 Execute through Command line
 
  Command to execute single test case.
-	Then give the values to the variables as 
- 		goal = clean verify
-		profiles =my-integration-test
-		meta.filter =+meta ids of scenarios
- 		i.e. meta.filter= +100.01 Base_Url = https://www.abhibus.com/
-	mvn clean verify -Dmy-integration-test  -Dmeta.filter="+100.01" -DBase_Url =https://www.abhibus.com/
- where 100.01 is meta id of test case.
 	
  if you want to run more than one test cases then
 	
