@@ -109,7 +109,7 @@ There will be report generated in path  src/main/resources/reports with name hav
 I have faced many issues regarding compatibility between versions of Selenium and Firefox,
 One valid compatible combination I have found as below,
 
-	Selenium Vesrion 2.47 and Firefox 33.o 
+	Selenium Vesrion 2.47 and Firefox 33.0 
 	
 If user faces compatibility issue for Selenium and firefox ,user is advised to use above versions for the same.
 
