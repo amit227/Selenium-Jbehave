@@ -73,9 +73,9 @@ Go to eclipse and run as configuration and select maven build.
 	Then give the values to the variables as 
 	
 	
- 		goal = clean verify,
-		profiles =my-integration-test,
-		meta.filter =+meta ids of scenarios,
+ 		goal = clean verify
+		profiles =my-integration-test
+		meta.filter =+meta ids of scenarios
  	        Base_Url = https://www.abhibus.com/
 	
 internally command will be formed like below
