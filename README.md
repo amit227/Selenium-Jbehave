@@ -71,12 +71,16 @@ https://cloud.githubusercontent.com/assets/22616784/19104443/1f6b4a4a-8afa-11e6-
   
 Go to eclipse and run as configuration and select maven build.
 	Then give the values to the variables as 
+	
+	
  		goal = clean verify,
 		profiles =my-integration-test,
 		meta.filter =+meta ids of scenarios,
  	        Base_Url = https://www.abhibus.com/
 	
 internally command will be formed like below
+
+
 	mvn clean verify -Dmy-integration-test  -Dmeta.filter="+100.01" -DBase_Url =https://www.abhibus.com/
 where 100.01 is meta id of test case.
 
