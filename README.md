@@ -59,7 +59,15 @@ https://cloud.githubusercontent.com/assets/22616784/19104444/1f6d5510-8afa-11e6-
 Checkout the project to your local: 
 There are test cases written in Jbehave  format in Jbehave story files so each test case has its unique meta id. 
 
- Execution through Eclipse
+
+
+
+screenshot 10
+https://cloud.githubusercontent.com/assets/22616784/19104443/1f6b4a4a-8afa-11e6-8e5c-ccbab0d278f5.PNG
+
+
+
+Execution through Eclipse
   
 Go to eclipse and run as configuration and select maven build.
 Then give the values to the variables as 
@@ -70,11 +78,6 @@ Then give the values to the variables as
 
 Then run it.
 There will be report generated in path  src/main/resources/reports with name having Automation_test_report + time stamp
-
-
-screenshot 10
-https://cloud.githubusercontent.com/assets/22616784/19104443/1f6b4a4a-8afa-11e6-8e5c-ccbab0d278f5.PNG
-
 
 Execute through Command line
 
