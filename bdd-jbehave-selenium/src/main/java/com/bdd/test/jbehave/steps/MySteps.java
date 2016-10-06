@@ -37,6 +37,7 @@ public class MySteps {
 		/*firefoxProfile = new FirefoxProfile();
 		driver = new FirefoxDriver(firefoxBinary, firefoxProfile);*/
 		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
 		genericPage = new GenericPage(driver);
 	}
 
@@ -227,6 +228,15 @@ public class MySteps {
 			}
 		}
 
+	}
+	
+	@AfterScenario(uponType=ScenarioType.EXAMPLE)
+	public void closeOperation()
+	{
+		driver.close();
+		
+		
+		
 	}
 
 }

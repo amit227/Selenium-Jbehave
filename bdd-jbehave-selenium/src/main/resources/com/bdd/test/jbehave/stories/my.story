@@ -33,7 +33,7 @@ Then create Customized report <testCaseName>
 Examples:
 
 |filePath|testCaseName|
-|src\\main\\resources\\LoginExcel.xls|"100.02 Verify page lables"|
+|src\\main\\resources\\test_data_sheet\\LoginExcel.xls|"100.02 Verify page lables"|
 
 
 Scenario: 100.03 Scenario to be failed
@@ -48,5 +48,5 @@ Then create Customized report <testCaseName>
 Examples:
 
 |filePath|testCaseName|
-|src\\main\\resources\\LoginExcel.xls|"100.03 Scenario to be failed"|
+|src\\main\\resources\\test_data_sheet\\LoginExcel.xls|"100.03 Scenario to be failed"|
 
