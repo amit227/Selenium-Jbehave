@@ -41,7 +41,7 @@ public class MySteps {
 		genericPage = new GenericPage(driver);
 	}
 
-	@Given("Launch the site")
+	@Given("User has Launched the site")
 	public void fn1() {
 
 		reportingFlag = genericPage.open(genericPage.urlValidation());
@@ -68,7 +68,7 @@ public class MySteps {
 
 	}
 
-	@Given("Read User Name and Password from Excel <filePath> <testCaseName> and do login")
+	@Given("user logs in with the credentials which are stored in excel at path as<filePath> for testcase as <testCaseName>")
 	public void fn2(@Named("filePath") String filePath, @Named("testCaseName") String testCaseName) {
 
 		LoginCredentials loginCredentials = new LoginCredentials(filePath, testCaseName);
@@ -100,7 +100,7 @@ public class MySteps {
 
 	}
 
-	@Given("Verify page lables")
+	@Given("System should show all the correct page lables")
 	public void fn3() {
 
 		AbhiBusPage abhiBusPage = new AbhiBusPage(driver);
@@ -125,7 +125,7 @@ public class MySteps {
 
 	}
 
-	@Then("create Customized report <testCaseName>")
+	@And("create Customized report <testCaseName>")
 
 	public void createReport(@Named("testCaseName") String test) {
 		System.out.println("childnode status  list ");
