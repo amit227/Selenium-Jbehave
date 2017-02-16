@@ -23,11 +23,11 @@ Scenario: 100.02 check Search result page
 Meta:
 @100.02
 
-Given Launch the site
-Given Read User Name and Password from Excel <filePath> <testCaseName> and do login
-Given enquire for seat availabilty
-When check whether it is going to search result page
-Then create Customized report <testCaseName>
+Given User has Launched the site
+When user logs in with the credentials which are stored in excel at path as<filePath> for testcase as <testCaseName>
+When user enquires for seat availabilty
+Then System should show search result page
+And create Customized report <testCaseName>
 
 
 Examples:
@@ -40,9 +40,10 @@ Scenario: 100.03 Scenario to be failed
 Meta:
 @100.03
 
-Given Launch the site
-When Verify page title
-Then create Customized report <testCaseName>
+Given User has Launched the site
+When User is on login page
+Then System should show correct page title
+And create Customized report <testCaseName>
 
 
 Examples:
