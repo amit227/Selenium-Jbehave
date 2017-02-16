@@ -7,10 +7,10 @@ Scenario: 100.01 Verify page lables
 Meta:
 @100.01
 
-Given Launch the site
-Given Read User Name and Password from Excel <filePath> <testCaseName> and do login
-Given Verify page lables
-Then create Customized report <testCaseName>
+Given User has Launched the site
+When user logs in with the credentials which are stored in excel at path as<filePath> for testcase as <testCaseName>
+Then System should show all the correct page lables
+And create Customized report <testCaseName>
 
 
 Examples:
