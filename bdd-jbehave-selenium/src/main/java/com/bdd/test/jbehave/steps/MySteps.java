@@ -42,6 +42,7 @@ public class MySteps {
 	}
 
 	@Given("User has Launched the site")
+	
 	public void fn1() {
 
 		reportingFlag = genericPage.open(genericPage.urlValidation());
@@ -50,25 +51,53 @@ public class MySteps {
 
 		if (reportingFlag == null) {
 
-			ReportParams.reportChildParams("Launch the site", "Unknown error, Review required!", ReportParams.UNKNOWN,
+			ReportParams.reportChildParams("User has Launched the site", "Unknown error, Review required!", ReportParams.UNKNOWN,
 					screenShotPath);
 
 		} else {
 			if (reportingFlag.equals(Boolean.TRUE)) {
 
-				ReportParams.reportChildParams("Launch the site", "Site is launched ", ReportParams.PASS,
+				ReportParams.reportChildParams("User has Launched the site", "Site is launched ", ReportParams.PASS,
 						screenShotPath);
 			}
 			if (reportingFlag.equals(Boolean.FALSE)) {
 
-				ReportParams.reportChildParams("Launch the site", "Site dint launch", ReportParams.FAIL,
+				ReportParams.reportChildParams("User has Launched the site", "Site dint launch", ReportParams.FAIL,
+						screenShotPath);
+			}
+		}
+
+	}
+	
+	
+	@When("User is on login page")
+	public void fn2() {
+
+		reportingFlag = genericPage.open(genericPage.urlValidation());
+		GenericPage.delayTimer(4000);
+		String screenShotPath = genericPage.captureScreenShot("User is on login page");
+
+		if (reportingFlag == null) {
+
+			ReportParams.reportChildParams("User is on login page", "Unknown error, Review required!", ReportParams.UNKNOWN,
+					screenShotPath);
+
+		} else {
+			if (reportingFlag.equals(Boolean.TRUE)) {
+
+				ReportParams.reportChildParams("User is on login page", "Site is launched ", ReportParams.PASS,
+						screenShotPath);
+			}
+			if (reportingFlag.equals(Boolean.FALSE)) {
+
+				ReportParams.reportChildParams("User is on login page", "Site dint launch", ReportParams.FAIL,
 						screenShotPath);
 			}
 		}
 
 	}
 
-	@Given("user logs in with the credentials which are stored in excel at path as<filePath> for testcase as <testCaseName>")
+	@When("user logs in with the credentials which are stored in excel at path as<filePath> for testcase as <testCaseName>")
 	public void fn2(@Named("filePath") String filePath, @Named("testCaseName") String testCaseName) {
 
 		LoginCredentials loginCredentials = new LoginCredentials(filePath, testCaseName);
@@ -76,50 +105,50 @@ public class MySteps {
 		AbhiBusPage abhiBusPage = new AbhiBusPage(driver);
 		reportingFlag = abhiBusPage.login(credentials[0], credentials[1]);
 
-		String screenShotPath = genericPage.captureScreenShot("Read User Name and Password from Excel and do login");
+		String screenShotPath = genericPage.captureScreenShot("user logs in with the credentials");
 
 		if (reportingFlag == null) {
 
 			ReportParams.reportChildParams(
-					"Read User Name and Password from Excel <filePath> <testCaseName> and do login",
+					"user logs in with the credentials",
 					"Unknown error, Review required!", ReportParams.UNKNOWN, screenShotPath);
 		} else {
 			if (reportingFlag.equals(Boolean.TRUE)) {
 
 				ReportParams.reportChildParams(
-						"Read User Name and Password from Excel <filePath> <testCaseName> and do login",
+						"user logs in with the credentials",
 						"read and login was successful", ReportParams.PASS, screenShotPath);
 			}
 			if (reportingFlag.equals(Boolean.FALSE)) {
 
 				ReportParams.reportChildParams(
-						"Read User Name and Password from Excel <filePath> <testCaseName> and do login",
+						"user logs in with the credentials",
 						"login was not successful", ReportParams.FAIL, screenShotPath);
 			}
 		}
 
 	}
 
-	@Given("System should show all the correct page lables")
+	@Then("System should show all the correct page lables")
 	public void fn3() {
 
 		AbhiBusPage abhiBusPage = new AbhiBusPage(driver);
 		reportingFlag = abhiBusPage.verifyHomePageLables();
 
-		String screenShotPath = genericPage.captureScreenShot("Verify page lables");
+		String screenShotPath = genericPage.captureScreenShot("System should show all the correct page lables");
 
 		if (reportingFlag == null) {
 
-			ReportParams.reportChildParams("Verify page lables", "Unknown error, Review required!",
+			ReportParams.reportChildParams("System should show all the correct page lables", "Unknown error, Review required!",
 					ReportParams.UNKNOWN, screenShotPath);
 		} else {
 			if (reportingFlag.equals(Boolean.TRUE)) {
 
-				ReportParams.reportChildParams("Verify page lables", "Verified", ReportParams.PASS, screenShotPath);
+				ReportParams.reportChildParams("System should show all the correct page lables", "Verified", ReportParams.PASS, screenShotPath);
 			}
 			if (reportingFlag.equals(Boolean.FALSE)) {
 
-				ReportParams.reportChildParams("Verify page lables", "not matched", ReportParams.FAIL, screenShotPath);
+				ReportParams.reportChildParams("System should show all the correct page lables", "not matched", ReportParams.FAIL, screenShotPath);
 			}
 		}
 
@@ -152,59 +181,59 @@ public class MySteps {
 		extentReportTest.extentReport();
 	}
 
-	@Given("enquire for seat availabilty")
+	@When("user enquires for seat availabilty")
 	public void searchSeatAvailability() {
 		AbhiBusPage abhiBusPage = new AbhiBusPage(driver);
 		reportingFlag = abhiBusPage.searchForSeats();
 
-		String screenShotPath = genericPage.captureScreenShot("enquire for seat availabilty");
+		String screenShotPath = genericPage.captureScreenShot("user enquires for seat availabilty");
 
 		if (reportingFlag == null) {
 
-			ReportParams.reportChildParams("enquire for seat availabilty", "Unknown error, Review required!",
+			ReportParams.reportChildParams("user enquires for seat availabilty", "Unknown error, Review required!",
 					ReportParams.UNKNOWN, screenShotPath);
 		} else {
 			if (reportingFlag.equals(Boolean.TRUE)) {
 
-				ReportParams.reportChildParams("enquire for seat availabilty", "Enquired", ReportParams.PASS,
+				ReportParams.reportChildParams("user enquires for seat availabilty", "Enquired", ReportParams.PASS,
 						screenShotPath);
 			}
 			if (reportingFlag.equals(Boolean.FALSE)) {
 
-				ReportParams.reportChildParams("enquire for seat availabilty", "Problem while enquiry",
+				ReportParams.reportChildParams("user enquires for seat availabilty", "Problem while enquiry",
 						ReportParams.FAIL, screenShotPath);
 			}
 		}
 
 	}
 
-	@When("check whether it is going to search result page")
+	@Then("System should show search result page")
 	public void checkSearchResultUI() {
 		AbhiBusPage abhiBusPage = new AbhiBusPage(driver);
 		reportingFlag = abhiBusPage.checkSearchResultPage();
 
-		String screenShotPath = genericPage.captureScreenShot("check whether it is going to search result page");
+		String screenShotPath = genericPage.captureScreenShot("System should show search result page");
 
 		if (reportingFlag == null) {
 
-			ReportParams.reportChildParams("check whether it is going to search result page",
+			ReportParams.reportChildParams("System should show search result page",
 					"Unknown error, Review required!", ReportParams.UNKNOWN, screenShotPath);
 		} else {
 			if (reportingFlag.equals(Boolean.TRUE)) {
 
-				ReportParams.reportChildParams("check whether it is going to search result page",
+				ReportParams.reportChildParams("System should show search result page",
 						"Yes this is search result page", ReportParams.PASS, screenShotPath);
 			}
 			if (reportingFlag.equals(Boolean.FALSE)) {
 
-				ReportParams.reportChildParams("check whether it is going to search result page",
+				ReportParams.reportChildParams("System should show search result page",
 						"This is not the search result page", ReportParams.FAIL, screenShotPath);
 			}
 		}
 
 	}
 
-	@When("Verify page title")
+	@Then("System should show correct page title")
 	public void getAndVerifyPageTitle() {
 		AbhiBusPage abhiBusPage = new AbhiBusPage(driver);
 		reportingFlag = abhiBusPage.verifyPageTile();
@@ -213,17 +242,17 @@ public class MySteps {
 
 		if (reportingFlag == null) {
 
-			ReportParams.reportChildParams("Verify page title", "Unknown error, Review required!", ReportParams.UNKNOWN,
+			ReportParams.reportChildParams("System should show correct page title", "Unknown error, Review required!", ReportParams.UNKNOWN,
 					screenShotPath);
 		} else {
 			if (reportingFlag.equals(Boolean.TRUE)) {
 
-				ReportParams.reportChildParams("Verify page title", "Page titles matched", ReportParams.PASS,
+				ReportParams.reportChildParams("System should show correct page title", "Page titles matched", ReportParams.PASS,
 						screenShotPath);
 			}
 			if (reportingFlag.equals(Boolean.FALSE)) {
 
-				ReportParams.reportChildParams("Verify page title",
+				ReportParams.reportChildParams("System should show correct page title",
 						"Actual page title din't match with expected page title", ReportParams.FAIL, screenShotPath);
 			}
 		}
