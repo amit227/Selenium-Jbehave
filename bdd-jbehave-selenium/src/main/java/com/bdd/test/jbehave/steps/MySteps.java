@@ -154,7 +154,7 @@ public class MySteps {
 
 	}
 
-	@And("create Customized report <testCaseName>")
+	@Then("create Customized report <testCaseName>")
 
 	public void createReport(@Named("testCaseName") String test) {
 		System.out.println("childnode status  list ");
